@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Diploma.DMIInfoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <ScrollViewer>
+        <StackPanel Margin="10">
+            <TextBlock Text="Direct Media Interface (DMI)" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock TextWrapping="Wrap" Margin="5,5">
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Direct Media Interface (DMI) — це високошвидкісний послідовний інтерфейс типу «точка-точка», який використовується для з'єднання центрального процесора (CPU) 
+                з платформним контролером (PCH) у сучасних комп'ютерних системах. DMI забезпечує передачу даних між CPU та периферійними пристроями, підключеними до PCH, 
+                такими як SATA-накопичувачі, USB-порти, мережеві контролери та аудіо-пристрої.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                На відміну від PCI Express, DMI є пропрієтарним інтерфейсом Intel, 
+                оптимізованим для зв'язку між CPU та PCH, але з обмеженою пропускною здатністю. Наприклад, DMI 3.0 підтримує до 3,94 ГБ/с при конфігурації x4, 
+                що може створювати «вузьке місце» для високопродуктивних периферійних пристроїв, таких як твердотільні накопичувачі NVMe.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Ця симуляція моделює спрощену систему DMI 3.0, зосереджуючись на зв'язку між CPU та PCH. Модель візуалізує передачу даних з урахуванням обмеження пропускної здатності, 
+                демонструючи вплив DMI на продуктивність системи при інтенсивних операціях введення-виведення. Завдяки анімованим пакетам даних та інтерактивним елементам, 
+                симуляція забезпечує навчальне представлення роботи DMI та його ролі в архітектурі сучасних комп'ютерів.
+                </TextBlock>
+            </TextBlock>
+            <TextBlock Text="Приклад топології DMI" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+            <Image Source="/Pictures/DMI_topology.PNG" Width="500" Height="300" Margin="0,5"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+            <TextBlock TextWrapping="Wrap" Margin="0,5">
+                Діаграма вище демонструє топологію DMI, що з'єднує CPU з PCH через прямий послідовний інтерфейс.
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

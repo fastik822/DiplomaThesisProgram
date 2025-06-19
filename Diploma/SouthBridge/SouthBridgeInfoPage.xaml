@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Diploma.SouthBridgeInfoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel Margin="10">
+            <TextBlock Text="South Bridge (Platform Controller Hub)" FontSize="18" FontWeight="Bold"/>
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+                Південний міст, який історично був частиною чіпсету в материнських платах комп'ютерів, відповідає за управління
+                багатьма периферійними інтерфейсами з низькою швидкістю. Хоча сучасні системи інтегрують цю функціональність в
+                єдиний контролер платформи (PCH), архітектурна роль залишається критичною для розуміння того, як
+                процесори спілкуються з пристроями вводу/виводу (I/O).
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" FontSize="14" >
+                Ключові інтерфейси, які зазвичай управляються південним мостом, включають PCI Express (особливо з'єднання з нижньою смугою),
+                SATA для пристроїв зберігання даних, USB для зовнішніх периферійних пристроїв, аудіоконтролери, мережеві інтерфейси та підтримка застарілих
+                стандартів через LPC (наприклад, Super I/O, BIOS flash).
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+                Південний міст підключається до центрального процесора або північного мосту через Direct Media Interface (DMI),
+                забезпечуючи двоточковий канал зв'язку. Хоча більша частина його логіки зараз централізована в сучасних PCH,
+                концептуальна структура південного мосту залишається важливою моделлю для розуміння в освітніх цілях.
+            </TextBlock>
+            <TextBlock Text="Example Topology" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  Margin="0,5">
+                <Image Source="/Pictures/south1.png" Width="340" Height="Auto" Margin="0,5" Stretch="Uniform"
+                       MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+                <Image Source="/Pictures/south2.jpg" Width="340" Height="Auto" Margin="0,5" Stretch="Uniform"
+                       MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+            </StackPanel>
+            
+            <TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,5,0,0">
+                На схемах вище показані підключення південного моста, включаючи підключення PCIe, SATA, USB, аудіо та BIOS Flash.
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

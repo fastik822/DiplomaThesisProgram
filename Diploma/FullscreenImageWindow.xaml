@@ -1,0 +1,9 @@
+﻿<Window x:Class="Diploma.FullscreenImageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" WindowState="Maximized" Background="Black"
+        MouseLeftButtonUp="Window_MouseLeftButtonUp">
+    <Grid Background="White">
+        <Image x:Name="FullImage" Stretch="Uniform" Cursor="Hand"/>
+    </Grid>
+</Window>

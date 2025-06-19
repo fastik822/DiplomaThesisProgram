@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="Diploma.DMISimulationPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Diploma">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="SimulationCanvas" Background="White" Margin="10" Width="800" Height="500">
+            <!-- CPU -->
+            <Border BorderBrush="Black" BorderThickness="2" Background="#EFEFEF"
+                    Width="120" Height="60" Canvas.Left="380" Canvas.Top="100">
+                <TextBlock Text="CPU" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+            </Border>
+
+            <!-- DDR4 Memory Slot -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#F0F8FF"
+                    Width="150" Height="40" Canvas.Left="530" Canvas.Top="105">
+                <TextBlock Text="DDR4 Memory Slot" TextAlignment="Center"
+                           VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Border>
+
+            <!-- PCI Express Slot -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#F0F8FF"
+                    Width="150" Height="40" Canvas.Left="200" Canvas.Top="105">
+                <TextBlock Text="PCI Express Slot" TextAlignment="Center"
+                           VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Border>
+
+            <!-- Chipset -->
+            <Border BorderBrush="Black" BorderThickness="2" Background="#E0E0E0"
+                    Width="120" Height="120" Canvas.Left="380" Canvas.Top="250">
+                <TextBlock Text="Chipset" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+            </Border>
+
+            <!-- SSD -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#F0F8FF"
+                    Width="130" Height="40" Canvas.Left="560" Canvas.Top="260">
+                <TextBlock Text="SSD (Feature Extraction" TextAlignment="Center"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+
+            <!-- Connection CPU - Chipset -->
+            <TextBlock Text="DMI 3.0 (3.94 GB/s)" Canvas.Left="330" Canvas.Top="195"/>
+            <Line x:Name="DMIConnection" X1="440" Y1="160" X2="440" Y2="250"
+                  Stroke="Black" StrokeThickness="2" StrokeDashArray="2"/>
+
+            <!-- USB Ports -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#F0F8FF"
+                    Width="120" Height="40" Canvas.Left="200" Canvas.Top="260">
+                <TextBlock Text="USB Ports" TextAlignment="Center"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+
+            <!-- Network Cards -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#F0F8FF"
+                    Width="120" Height="40" Canvas.Left="200" Canvas.Top="320">
+                <TextBlock Text="Network Cards" TextAlignment="Center"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+
+            <!-- PCIe M.2 -->
+            <Border BorderBrush="Black" BorderThickness="1" Background="#F0F8FF"
+                    Width="130" Height="40" Canvas.Left="560" Canvas.Top="320">
+                <TextBlock Text="PCI Express (M.2)" TextAlignment="Center"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+
+            
+
+            
+            <!-- CPU to Memory -->
+            <Line X1="500" Y1="130" X2="530" Y2="130" Stroke="Black" StrokeThickness="2" />
+            <!-- CPU to PCIe Slot -->
+            <Line X1="380" Y1="130" X2="350" Y2="130" Stroke="Black" StrokeThickness="2" />
+
+            <!-- Chipset to USB -->
+            <Line X1="380" Y1="280" X2="320" Y2="280" Stroke="Black" StrokeThickness="2" />
+            <!-- Chipset to Net -->
+            <Line X1="380" Y1="340" X2="320" Y2="340" Stroke="Black" StrokeThickness="2" />
+
+            <!-- Chipset to SSD -->
+            <Line X1="500" Y1="280" X2="560" Y2="280" Stroke="Black" StrokeThickness="2" />
+            <!-- Chipset to M2 -->
+            <Line X1="500" Y1="340" X2="560" Y2="340" Stroke="Black" StrokeThickness="2" />
+            
+            
+
+            <!-- Data Packet -->
+            <Ellipse x:Name="Packet" Canvas.Left="415" Canvas.Top="165" Width="30" Height="30" Fill="Yellow" Stroke="Black" Visibility="Hidden" Canvas.ZIndex="10"/>
+            <TextBlock x:Name="PacketLabel" Canvas.Left="415" Canvas.Top="145" Visibility="Hidden" Text="Data" Canvas.ZIndex="11"/>
+
+            <!-- SSD Packet -->
+            <Ellipse x:Name="SsdPacket" Canvas.Left="560" Canvas.Top="280" Width="30" Height="30" Fill="Green" Stroke="Black" Visibility="Hidden" Canvas.ZIndex="10"/>
+            <TextBlock x:Name="SsdPacketLabel" Canvas.Left="560" Canvas.Top="260" Visibility="Hidden" Text="Feature Data" Canvas.ZIndex="11"/>
+
+            <!-- Bandwidth Indicator -->
+            <TextBlock x:Name="BandwidthIndicator" Canvas.Left="10" Canvas.Top="460" Text="Bandwidth: 3.94 GB/s" FontSize="12"/>
+
+            <!-- Layer Indicators (CPU Side) -->
+            <TextBlock x:Name="TransactionLayerCPU" Canvas.Left="450" Canvas.Top="65" Text="Transaction Layer" FontSize="10" Foreground="Gray"/>
+            <TextBlock x:Name="DataLinkLayerCPU" Canvas.Left="450" Canvas.Top="75" Text="Data Link Layer" FontSize="10" Foreground="Gray"/>
+            <TextBlock x:Name="PhysicalLayerCPU" Canvas.Left="450" Canvas.Top="85" Text="Physical Layer" FontSize="10" Foreground="Gray"/>
+
+            <!-- Layer Indicators (Chipset Side) -->
+            <TextBlock x:Name="TransactionLayerChipset" Canvas.Left="450" Canvas.Top="215" Text="Transaction Layer" FontSize="10" Foreground="Gray"/>
+            <TextBlock x:Name="DataLinkLayerChipset" Canvas.Left="450" Canvas.Top="225" Text="Data Link Layer" FontSize="10" Foreground="Gray"/>
+            <TextBlock x:Name="PhysicalLayerChipset" Canvas.Left="450" Canvas.Top="235" Text="Physical Layer" FontSize="10" Foreground="Gray"/>
+
+            <!-- Legend -->
+            <Border Canvas.Left="10" Canvas.Top="500" Width="250" Height="80" BorderBrush="Black" BorderThickness="1" Background="White">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Legend:" FontSize="12" FontWeight="Bold" Margin="0,0,0,2"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="10" Height="10" Fill="Yellow" Margin="0,0,5,0"/>
+                        <TextBlock Text="Memory Read" Margin="0,0,10,0"/>
+                        <Ellipse Width="10" Height="10" Fill="Purple" Margin="0,0,5,0"/>
+                        <TextBlock Text="Memory Write" Margin="0,0,10,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="10" Height="10" Fill="Red" Margin="0,0,5,0"/>
+                        <TextBlock Text="Bottleneck" Margin="0,0,10,0"/>
+                        <Ellipse Width="10" Height="10" Fill="Green" Margin="0,0,5,0"/>
+                        <TextBlock Text="Feature Data" Margin="0,0,10,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Canvas>
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Simulation Controls" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <local:RoundedButton x:Name="InitializeLinkButton" Content="Initialize Link" Width="120" Height="30" Margin="5" Background="LightBlue" Click="InitializeLink_Click"/>
+            <local:RoundedButton x:Name="StartTransferButton" Content="Start Transfer" Width="120" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="StartTransfer_Click" IsEnabled="False"/>
+            <local:RoundedButton x:Name="BottleneckButton" Content="Simulate Bottleneck" Width="120" Height="30" Margin="5" Background="#FF7F7F" Click="Bottleneck_Click" IsEnabled="False"/>
+            <local:RoundedButton x:Name="MemoryWriteButton" Content="Memory Write" Width="120" Height="30" Margin="5" Background="#CBC3E3" Click="MemoryWrite_Click" IsEnabled="False"/>
+            <TextBlock Text="Status Log" FontSize="14" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBox x:Name="StatusLog" Height="250" Width="280" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

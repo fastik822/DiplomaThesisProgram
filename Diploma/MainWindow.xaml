@@ -1,0 +1,35 @@
+﻿<Window x:Class="Diploma.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:Diploma"
+        Title="Computer System Interfaces" Height="400" Width="600"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com">
+
+    
+    
+    <Grid>
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <Image gif:ImageBehavior.AnimatedSource="/Pictures/back6.gif"
+                   gif:ImageBehavior.AutoStart="True"
+                   gif:ImageBehavior.RepeatBehavior="1"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+
+        <TextBlock Text="Select an Interface to Explore" FontSize="20" FontWeight="Bold" Margin="10" Foreground="White" HorizontalAlignment="Center"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <local:RoundedButton Content="PCI Express Interface" Width="200" Height="50" Margin="10" Background="#add8e6" Click="PCIeButton_Click" FontSize="16"/>
+            <local:RoundedButton Content="Direct Media Interface" Width="200" Height="50" Margin="10"  Background="#add8e6" Click="DMIButton_Click" FontSize="16"/>
+            <local:RoundedButton Content="South Bridge" Width="200" Height="50" Margin="10" Background="#add8e6" Click="SouthBridgeButton_Click" FontSize="16"/>
+            <local:RoundedButton Content="Notrh Bridge" Width="200" Height="50" Margin="10" Background="#add8e6" Click="NorthBridgeButton_Click" FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pictures\back2.gif" />
+    <None Remove="Pictures\back3.gif" />
+    <None Remove="Pictures\back4.gif" />
+    <None Remove="Pictures\back5.gif" />
+    <None Remove="Pictures\back6.gif" />
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\back6.gif" />
+    <Resource Include="Pictures\DMI_topology.PNG" />
+    <Resource Include="Pictures\northbridge.png" />
+    <Resource Include="Pictures\northbridge1.jpg" />
+    <Resource Include="Pictures\northbridge2.png" />
+    <Resource Include="Pictures\PCIe.PNG" />
+    <Resource Include="Pictures\south1.png" />
+    <Resource Include="Pictures\south2.jpg" />
+	<Resource Include="Pictures\back.gif" />
+  </ItemGroup>
+
+</Project>

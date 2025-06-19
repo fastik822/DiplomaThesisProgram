@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Diploma.InfoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <ScrollViewer>
+        <StackPanel Margin="10">
+            <TextBlock Text="PCI Express (PCIe) Overview" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock TextWrapping="Wrap" Margin="5,5">
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Шина Peripheral Component Interconnect Express (PCIe) — це високошвидкісний стандарт послідовної передачі даних, 
+                який широко використовується в сучасних обчислювальних системах для підключення центрального процесора до периферійних пристроїв, 
+                таких як графічні процесори, твердотільні накопичувачі та мережеві карти. 
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                PCIe, що з'явилася як наступниця стандартів PCI та PCI-X, пропонує значні поліпшення, 
+                зокрема більшу пропускну здатність, масштабованість та надійність. Він працює за допомогою багаторівневої архітектури, що складається з рівня транзакцій, рівня передачі даних та фізичного рівня, 
+                що забезпечує ефективну передачу даних, обробку помилок та контроль потоку через топологію «точка-точка».
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Ця симуляція моделює спрощену систему PCIe 1.0, зосереджуючись на комунікації між кореневим комплексом (що представляє центральний процесор)
+                і кінцевою точкою графічного процесора через комутатор PCIe. Модель візуалізує ієрархічну топологію з додатковими декоративними кінцевими точками (SSD і мережева карта), 
+                щоб відобразити типову конфігурацію сервера. Працюючи на швидкості 2,5 ГТ/с з одним каналом (x1), симуляція демонструє ключові механізми PCIe, 
+                включаючи ініціалізацію зв'язку, пакети рівня транзакцій (TLP) для операцій читання/запису пам'яті, пакети рівня передачі даних (DLLP) для підтверджень і обробки помилок, 
+                а також управління потоком на основі кредитів. Завдяки інтерактивним елементам керування та анімованим рухам пакетів, вона забезпечує чітке, навчальне представлення 
+                потоку даних PCIe та поведінки протоколу для цілей дослідження та аналізу.
+                </TextBlock>
+            </TextBlock>
+            <TextBlock Text="PCIe Topology Example" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+            <Image Source="/Pictures/PCIe.PNG" Width="680" Height="420" Margin="0,5"
+                   MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+            <TextBlock TextWrapping="Wrap" Margin="0,5">
+                Діаграма, що представлена зверху демонструє топологію PCIe з наявними Початковими та кінцевими точками а також комутатором.
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

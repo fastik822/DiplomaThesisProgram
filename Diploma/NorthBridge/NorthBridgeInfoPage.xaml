@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Diploma.NorthBridgeInfoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel Margin="10" Orientation="Vertical">
+            <TextBlock Text="North Bridge Overview"
+                       FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Північний міст був ключовим компонентом чіпсету на старих материнських платах ПК, слугуючи високошвидкісним комунікаційним хабом, 
+                перш ніж його функції були інтегровані в процесори приблизно в 2008–2011 роках. Він з'єднує процесор, оперативну пам'ять і графічний процесор (через AGP або PCIe) для забезпечення швидкої передачі даних, 
+                а також взаємодіяв з південним мостом для повільніших периферійних пристроїв, таких як SATA і USB.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Його основні функції включають управління контролером пам'яті для доступу до оперативної пам'яті, маршрутизацію даних через передню шину (FSB) або HyperTransport,
+                а також обробку завдань з високою пропускною здатністю, таких як передача графіки та DMA.
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="14">
+                Північний міст має вирішальне значення для продуктивності системи завдяки своїй ролі в обміні даними з низькою затримкою та високою пропускною здатністю.
+                </TextBlock>
+            </TextBlock>
+
+            <TextBlock Text="Example Topologies" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Source="/Pictures/northbridge.png" Width="400" Height="300" Margin="5" 
+                       MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+                <Image Source="/Pictures/northbridge1.jpg" Width="400" Height="300" Margin="5"
+                       MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+                <Image Source="/Pictures/northbridge2.png" Width="400" Height="300" Margin="5"
+                       MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+                
+            </StackPanel>
+
+            <TextBlock TextWrapping="Wrap" Margin="0,10,0,0">
+                Наведених вище діаграмах показано структурне розташування північного моста відносно
+                процесора, оперативної пам'яті, PCI Express і південного моста. Хоча в нових чіпсетах північний міст інтегровано
+                в сам процесор, ця класична архітектура залишається цінною для розуміння потоку даних на рівні системи.
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
