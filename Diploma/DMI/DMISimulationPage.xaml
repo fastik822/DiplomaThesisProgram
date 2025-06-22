@@ -133,11 +133,11 @@
             </Border>
         </Canvas>
         <StackPanel Grid.Column="1" Margin="10">
-            <TextBlock Text="Simulation Controls" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
-            <local:RoundedButton x:Name="InitializeLinkButton" Content="Initialize Link" Width="120" Height="30" Margin="5" Background="LightBlue" Click="InitializeLink_Click"/>
-            <local:RoundedButton x:Name="StartTransferButton" Content="Start Transfer" Width="120" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="StartTransfer_Click" IsEnabled="False"/>
-            <local:RoundedButton x:Name="BottleneckButton" Content="Simulate Bottleneck" Width="120" Height="30" Margin="5" Background="#FF7F7F" Click="Bottleneck_Click" IsEnabled="False"/>
-            <local:RoundedButton x:Name="MemoryWriteButton" Content="Memory Write" Width="120" Height="30" Margin="5" Background="#CBC3E3" Click="MemoryWrite_Click" IsEnabled="False"/>
+            <TextBlock Text="Кнопки керування симуляцією" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <local:RoundedButton x:Name="InitializeLinkButton" Content="Ініціалізація зв'язку" Width="140" Height="30" Margin="5" Background="LightBlue" Click="InitializeLink_Click"/>
+            <local:RoundedButton x:Name="StartTransferButton" Content="Читання пам’яті" Width="140" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="StartTransfer_Click" IsEnabled="False"/>
+            <local:RoundedButton x:Name="BottleneckButton" Content="Симуляція bottleneck'у" Width="140" Height="30" Margin="5" Background="#FF7F7F" Click="Bottleneck_Click" IsEnabled="False"/>
+            <local:RoundedButton x:Name="MemoryWriteButton" Content="Запис в пам’ять" Width="140" Height="30" Margin="5" Background="#CBC3E3" Click="MemoryWrite_Click" IsEnabled="False"/>
             <TextBlock Text="Status Log" FontSize="14" FontWeight="Bold" Margin="0,10,0,5"/>
             <TextBox x:Name="StatusLog" Height="250" Width="280" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
         </StackPanel>

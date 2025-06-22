@@ -12,11 +12,11 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Cursor="">
-            <local:RoundedButton Content="Information" Width="120" Height="40" Margin="5"
+            <local:RoundedButton Content="Довідка" Width="120" Height="40" Margin="5"
                            Click="InfoButton_Click" Background="#add8e6" Cursor="Hand"/>
-            <local:RoundedButton Content="Simulation" Width="120" Height="40" Margin="5"
+            <local:RoundedButton Content="Симуляція" Width="120" Height="40" Margin="5"
                            Click="SimButton_Click" Background="#add8e6" Cursor="Hand"/>
-            <local:RoundedButton Content="Back" Width="120" Height="40" Margin="5"
+            <local:RoundedButton Content="На головну" Width="120" Height="40" Margin="5"
                            Click="BackButton_Click" Background="#add8e6" Cursor="Hand"/>
         </StackPanel>
 

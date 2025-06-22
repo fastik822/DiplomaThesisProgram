@@ -55,10 +55,10 @@
 
         <!-- Control panel-->
         <StackPanel Grid.Column="1" Margin="10,10,10,10">
-            <TextBlock Text="SATA Controls" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
-            <local:RoundedButton Content="Register FIS" Width="120" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="RegisterFIS_Click"/>
-            <local:RoundedButton Content="Data FIS" Width="120" Height="30" Margin="5" Background="LightBlue" Click="DataFIS_Click"/>
-            <local:RoundedButton Content="Set Device Bits FIS" Width="120" Height="30" Margin="5" Background="	#FF7F7F" Click="SetBitsFIS_Click"/>
+            <TextBlock Text="Керування симуляцією SATA" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <local:RoundedButton Content="Ініціалізація FIS" Width="120" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="RegisterFIS_Click"/>
+            <local:RoundedButton Content="Передача FIS" Width="120" Height="30" Margin="5" Background="LightBlue" Click="DataFIS_Click"/>
+            <local:RoundedButton Content="Оновлення хосту FIS" Width="120" Height="30" Margin="5" Background="	#FF7F7F" Click="SetBitsFIS_Click"/>
 
             <TextBlock Text="Status Log" FontWeight="Bold" Margin="0,15,0,5"/>
             <TextBox x:Name="StatusLog" Height="280" Width="220"

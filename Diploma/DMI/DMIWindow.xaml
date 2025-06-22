@@ -10,9 +10,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-            <local:RoundedButton Content="Information" Width="120" Height="40" Margin="5" Background="#add8e6" Click="InfoButton_Click" FontSize="14"/>
-            <local:RoundedButton Content="Simulation" Width="120" Height="40" Margin="5" Background="#add8e6" Click="SimButton_Click" FontSize="14"/>
-            <local:RoundedButton Content="Back" Width="120" Height="40" Margin="5" Background="#add8e6" Click="BackButton_Click" FontSize="14"/>
+            <local:RoundedButton Content="Довідка" Width="120" Height="40" Margin="5" Background="#add8e6" Click="InfoButton_Click" FontSize="14"/>
+            <local:RoundedButton Content="Симуляція" Width="120" Height="40" Margin="5" Background="#add8e6" Click="SimButton_Click" FontSize="14"/>
+            <local:RoundedButton Content="На головну" Width="120" Height="40" Margin="5" Background="#add8e6" Click="BackButton_Click" FontSize="14"/>
         </StackPanel>
         <ContentControl x:Name="ContentArea" Grid.Row="1" Margin="10"/>
     </Grid>

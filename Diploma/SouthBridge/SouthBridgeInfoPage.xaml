@@ -7,7 +7,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer>
         <StackPanel Margin="10">
-            <TextBlock Text="South Bridge (Platform Controller Hub)" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="Відомості про South Bridge (Platform Controller Hub)" FontSize="18" FontWeight="Bold"/>
             <TextBlock TextWrapping="Wrap" FontSize="14">
                 Південний міст, який історично був частиною чіпсету в материнських платах комп'ютерів, відповідає за управління
                 багатьма периферійними інтерфейсами з низькою швидкістю. Хоча сучасні системи інтегрують цю функціональність в
@@ -24,7 +24,7 @@
                 забезпечуючи двоточковий канал зв'язку. Хоча більша частина його логіки зараз централізована в сучасних PCH,
                 концептуальна структура південного мосту залишається важливою моделлю для розуміння в освітніх цілях.
             </TextBlock>
-            <TextBlock Text="Example Topology" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+            <TextBlock Text="Приклади топології інтерфейса South Bridge" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
             <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center"  Margin="0,5">
                 <Image Source="/Pictures/south1.png" Width="340" Height="Auto" Margin="0,5" Stretch="Uniform"
                        MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>

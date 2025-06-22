@@ -65,10 +65,10 @@
 
         <!-- control panel-->
         <StackPanel Grid.Column="1" Margin="10">
-            <TextBlock Text="USB Controls" FontSize="14" FontWeight="Bold" Margin="0,0,0,6"/>
-            <local:RoundedButton Content="IN Token" Width="120" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="IN_Click"/>
-            <local:RoundedButton Content="OUT Token" Width="120" Height="30" Margin="5" Background="#FFD580" Click="OUT_Click"/>
-            <local:RoundedButton Content="Reset" Width="120" Height="30" Margin="5" Background="LightBlue" Click="Reset_Click"/>
+            <TextBlock Text="Кнопки керування симуляцією" FontSize="14" FontWeight="Bold" Margin="0,0,0,6"/>
+            <local:RoundedButton Content="IN токен" Width="120" Height="30" Margin="5" Background="LightGoldenrodYellow" Click="IN_Click"/>
+            <local:RoundedButton Content="OUT токен" Width="120" Height="30" Margin="5" Background="#FFD580" Click="OUT_Click"/>
+            <local:RoundedButton Content="Очистка журналу" Width="120" Height="30" Margin="5" Background="LightBlue" Click="Reset_Click"/>
 
             <TextBlock Text="Status Log" FontWeight="Bold" Margin="0,12,0,5"/>
             <TextBox x:Name="UsbLog" Height="280" Width="220"

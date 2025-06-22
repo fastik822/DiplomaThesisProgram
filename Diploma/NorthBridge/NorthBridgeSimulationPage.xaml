@@ -89,10 +89,10 @@
         </Canvas>
         <!-- Control Panel -->
             <StackPanel Grid.Column="1" Margin="10">
-                <TextBlock Text="Simulation Controls" FontWeight="Bold" FontSize="14" Margin="0,0,0,6"/>
-                <local:RoundedButton Content="Instruction Fetch (FSB)" Height="30" Width="150" Margin="5" Background="LightGreen" Click="InstructionFetch_Click"/>
-                <local:RoundedButton Content="Memory Read (NB → RAM)" Height="30" Width="150" Margin="5" Background="#1591EA" Click="RamBurstFetch_Click"/>
-                <local:RoundedButton Content="SB DMA → RAM" Height="30" Width="150" Margin="5" Background="#FF7F7F" Click="SataDmaRequest_Click"/>
+            <TextBlock Text="Кнопки керування симуляцією" FontWeight="Bold" FontSize="14" Margin="0,0,0,6"/>
+            <local:RoundedButton Content="Виконання команди" Height="30" Width="150" Margin="5" Background="LightGreen" Click="InstructionFetch_Click"/>
+            <local:RoundedButton Content="Читання пам’яті (NB → RAM)" Height="30" Width="150" Margin="5" Background="#1591EA" Click="RamBurstFetch_Click"/>
+                <local:RoundedButton Content="ПМ DMA → RAM" Height="30" Width="150" Margin="5" Background="#FF7F7F" Click="SataDmaRequest_Click"/>
 
                 <TextBlock Text="Status Log" FontWeight="Bold" Margin="0,12,0,4"/>
                 <TextBox x:Name="Log" Width="230" Height="320" IsReadOnly="True"

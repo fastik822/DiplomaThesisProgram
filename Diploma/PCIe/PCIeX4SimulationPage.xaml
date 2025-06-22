@@ -143,14 +143,14 @@
 
         <!-- control panel  -->
         <StackPanel Grid.Column="1" Margin="10">
-            <TextBlock Text="Simulation Controls" FontWeight="Bold" FontSize="14" Margin="0,0,0,6"/>
-            <local:RoundedButton x:Name="InitBtn" Content="Initialize Link" Height="30" Width="120" Margin="5" Background="LightBlue"
+            <TextBlock Text="Кнопки керування симуляцією" FontWeight="Bold" FontSize="14" Margin="0,0,0,6"/>
+            <local:RoundedButton x:Name="InitBtn" Content="Ініціалізація зв'язку" Height="30" Width="140" Margin="5" Background="LightBlue"
                     Click="Init_Click"/>
-            <local:RoundedButton x:Name="StartTransferButton" Content="Start Transfer" Height="30" Width="120" Margin="5" Background="LightGoldenrodYellow"
+            <local:RoundedButton x:Name="StartTransferButton" Content="Читання пам’яті" Height="30" Width="140" Margin="5" Background="LightGoldenrodYellow"
                     Click="StartTransfer_Click" IsEnabled="False"/>
-            <local:RoundedButton x:Name="IntroduceErrorButton" Content="Introduce Error" Height="30" Width="120" Margin="5" Background="#FF7F7F"
+            <local:RoundedButton x:Name="IntroduceErrorButton" Content="Симуляція несправності" Height="30" Width="140" Margin="5" Background="#FF7F7F"
                     Click="IntroduceError_Click" IsEnabled="False"/>
-            <local:RoundedButton x:Name="MemoryWriteButton" Content="Memory Write" Height="30" Width="120" Margin="5" Background="#CBC3E3"
+            <local:RoundedButton x:Name="MemoryWriteButton" Content="Запис в пам’ять" Height="30" Width="140" Margin="5" Background="#CBC3E3"
                     Click="MemoryWrite_Click" IsEnabled="False"/>
 
             <TextBlock Text="Status Log" FontWeight="Bold" Margin="0,12,0,4"/>
